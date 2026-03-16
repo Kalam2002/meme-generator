@@ -206,11 +206,11 @@ button:hover {
 }
 
 .meme--text-top{
-  top: 0vh;
+  top: 10px;
 }
 
 .meme--text-bottom{
-  bottom: 0vh;
+  bottom: 10px;
 }
 
 /* DOWNLOAD BUTTON */
@@ -242,4 +242,65 @@ button:hover {
 
 .content{
   flex: 1;
+}
+
+/* ------------------- */
+/* RESPONSIVE DESIGN */
+/* ------------------- */
+
+@media (max-width: 768px){
+
+  .input-div{
+    flex-direction: column;
+  }
+
+  .meme-img{
+    width: 320px;
+  }
+
+  button{
+    width: 180px;
+  }
+
+  .meme--text-top,
+  .meme--text-bottom{
+    font-size: 1.6rem;
+  }
+
+}
+
+@media (max-width: 480px){
+
+  .navbar{
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .nav-img{
+    height: 45px;
+  }
+
+  .uiverse-pixel-input{
+    width: 90vw;
+  }
+
+  .meme-img{
+    width: 90vw;
+  }
+
+  button{
+    width: 70vw;
+    font-size: 0.9rem;
+  }
+
+  .meme--text-top,
+  .meme--text-bottom{
+    font-size: 1.3rem;
+  }
+
+  .footer{
+    font-size: 0.9rem;
+  }
+
 }
