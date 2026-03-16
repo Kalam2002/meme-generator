@@ -1,10 +1,15 @@
+*{
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   background-color: rgb(162, 229, 131);
 }
 
@@ -12,6 +17,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* NAVBAR */
+
 .navbar{
   display: flex;
   align-items: center;
@@ -21,35 +29,24 @@ code {
   color:white;
   background-color: rgb(31, 46, 126);
 }
+
 .nav-img {
   height: 60px;
   border-radius: 8px;
-}
-
-
-.nav-img {
-  animation: uiverse-glitch-input 0.3s steps(5) infinite;
+  animation: nav-img 0.3s steps(5) infinite;
 }
 
 /* Glitch animation */
+
 @keyframes nav-img {
-  0% {
-    transform: translate(0);
-  }
-  25% {
-    transform: translate(-2px, 2px);
-  }
-  50% {
-    transform: translate(2px, -2px);
-  }
-  75% {
-    transform: translate(-2px, -2px);
-  }
-  100% {
-    transform: translate(0);
-  }
+  0% { transform: translate(0); }
+  25% { transform: translate(-2px, 2px); }
+  50% { transform: translate(2px, -2px); }
+  75% { transform: translate(-2px, -2px); }
+  100% { transform: translate(0); }
 }
 
+/* INPUT AREA */
 
 .input-div{
   display: flex;
@@ -57,13 +54,14 @@ code {
   align-items: center;
   gap: 20px;
   padding: 20px;
-  justify-content:center;
-  align-self: center;
 }
+
 .form-button-div{
   display: flex;
-  justify-content: center; 
-} 
+  justify-content: center;
+}
+
+/* INPUT STYLE */
 
 .uiverse-pixel-input-wrapper {
   display: flex;
@@ -120,24 +118,17 @@ code {
   animation: uiverse-glitch-input 0.3s steps(2) infinite;
 }
 
-/* Glitch animation */
+/* INPUT GLITCH */
+
 @keyframes uiverse-glitch-input {
-  0% {
-    transform: translate(0);
-  }
-  25% {
-    transform: translate(-1px, 1px);
-  }
-  50% {
-    transform: translate(1px, -1px);
-  }
-  75% {
-    transform: translate(-1px, -1px);
-  }
-  100% {
-    transform: translate(0);
-  }
+  0% { transform: translate(0); }
+  25% { transform: translate(-1px, 1px); }
+  50% { transform: translate(1px, -1px); }
+  75% { transform: translate(-1px, -1px); }
+  100% { transform: translate(0); }
 }
+
+/* BUTTON */
 
 button {
   --width: 200px;
@@ -169,33 +160,34 @@ button:hover {
     rgb(250, 176, 5) 66.6%,
     rgb(250, 176, 5) 83.25%,
     rgb(253, 126, 20) 83.25%,
-    rgb(253, 126, 20) 100%,
-    rgb(250, 82, 82) 100%
+    rgb(253, 126, 20) 100%
   );
   animation: var(--timing) linear dance6123 infinite;
   transform: scale(1.1) translateY(-1px);
 }
 
 @keyframes dance6123 {
-  to {
-    background-position: var(--width);
-  }
+  to { background-position: var(--width); }
 }
+
+/* MEME SECTION */
 
 .meme{
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px;
+  margin: 30px auto;
 }
 
 .meme-img{
   border-radius: 10px;
-  width: 24em;
+  width: 380px;
+  max-width: 100%;
 }
 
-/* shared text style */
+/* MEME TEXT */
+
 .meme--text-top,
 .meme--text-bottom{
   position: absolute;
@@ -213,31 +205,41 @@ button:hover {
    -2px 2px 0 #000;
 }
 
-/* top text */
 .meme--text-top{
   top: 20px;
 }
 
-/* bottom text */
 .meme--text-bottom{
   bottom: 20px;
 }
+
+/* DOWNLOAD BUTTON */
+
 .download-button-div{
   margin-bottom: 50px;
   display: flex;
   justify-content: center;
 }
+
+/* FOOTER */
+
 .footer{
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
-  
-
-  position: relative;
-  bottom: 0;
+  padding: 14px;
   width: 100%;
-
   color: white;
   background-color: rgb(31, 46, 126);
+  font-weight: 500;
+}
+
+.page{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content{
+  flex: 1;
 }
