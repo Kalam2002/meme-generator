@@ -206,11 +206,11 @@ button:hover {
 }
 
 .meme--text-top{
-  top: 20px;
+  top: 0vh;
 }
 
 .meme--text-bottom{
-  bottom: 20px;
+  bottom: 0vh;
 }
 
 /* DOWNLOAD BUTTON */
