@@ -1,4 +1,3 @@
-import memesData from "./memesData";
 import React from "react";
 import html2canvas from "html2canvas";
 export default function MainContent() { 
@@ -90,6 +89,7 @@ export default function MainContent() {
                     src={meme.randomImage} 
                     className="meme-img"
                     crossOrigin="anonymous"
+                    alt="meme"
                 />
                 <h2 className="meme--text-top">{meme.topText}</h2>
                 <h2 className="meme--text-bottom">{meme.bottomText}</h2>
